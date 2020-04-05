@@ -1,0 +1,17 @@
+.left-menu {
+    height: calc(100% - 50px);
+    width: 200px;
+    background-color: #424242;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    color: #ffffff;
+}
+
+.menu-list{
+    list-style: none;
+}
+
+.menu-list li {
+    padding: 10px;
+}
