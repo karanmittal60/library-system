@@ -5,15 +5,13 @@ const TableList = (props) => {
     const {tableHead, tableBody} = props;
 
     const renderColmns = (body) => {
-        let trData = [];
-        Object.entries(body).forEach(([key, value], idx) => {
-            trData.push(
+        return Object.entries(body).map(([key, value], idx) => {
+            return (
                 <td key={(idx+key)}>
                     {value}
                 </td>
             )
         });
-        return trData
     };
 
     const renderBody = () => {

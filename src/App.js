@@ -5,6 +5,7 @@ import {routeRules} from "./routes/routeRules";
 import {routesData} from "./routes/routesData";
 import AppRoute from "./layoutRoute/AppRoute";
 import DefaultRoute from "./layoutRoute/DefaultRoute";
+import NotFound from "./components/notFound";
 
 function App() {
     return (
@@ -15,14 +16,15 @@ function App() {
                         <Redirect to={routeRules.signIn}/>
                     </Route>
                     {
-                        routesData.map(route => {
+                        routesData.map((route, index) => {
                             if (route.auth){
-                                return <AppRoute {...route} key={route.path}/>
+                                return <AppRoute {...route} key={index} />
                             } else {
-                                return <DefaultRoute {...route} key={route.path}/>
+                                return <DefaultRoute {...route} key={index}/>
                             }
                         })
                     }
+                    <Route path="*" exact={true}   component={NotFound} />
                 </Switch>
             </Router>
         </AppProvider>

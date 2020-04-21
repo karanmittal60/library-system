@@ -1,0 +1,51 @@
+
+.add-book-popup {
+    margin: 40px 20%;
+}
+
+.books-table thead th{
+    font-size: 13px;
+    font-weight: 400;
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;
+    border-bottom: 1px solid #fff;
+    color: #039;
+    padding: 8px;
+}
+
+.books-table td{
+    border-bottom: 1px solid #fff;
+    color: #669;
+    border-top: 1px solid transparent;
+    padding: 8px;
+}
+
+.books-table tr{
+    border-bottom: 1px solid #ddd;
+    background: #e8edff;
+
+}
+.books-table tr:hover{
+    background: #D0DAFD;
+}
+
+.btn {
+    background-color: #b9c9fe;
+    border: 1px solid #b9c9fe;
+    color: #039;
+}
+.btn:hover {
+    background-color: #b9c9fe;
+    border: 1px solid #b9c9fe;
+    color: #039;
+}
+.btn:focus {
+    background-color: #b9c9fe;
+    border: 1px solid #b9c9fe;
+    color: #039;
+}
+.btn:active {
+    background-color: #b9c9fe;
+    border: 1px solid #b9c9fe;
+    color: #039;
+}

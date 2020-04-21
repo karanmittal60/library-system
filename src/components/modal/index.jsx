@@ -9,7 +9,8 @@ function Modal (props){
                 <div className='modal-content'>
                     <div className='close-btn'>
                         <span onClick={props.hidePopup}>
-                            <i className="fa fa-times" aria-hidden="true"/>
+                            x
+                            {/*<i className="fa fa-times" aria-hidden="true"/>*/}
                         </span>
                     </div>
                     {props.children}

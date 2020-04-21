@@ -1,5 +1,6 @@
 import React from "react";
 import {AppContext} from "../context/AppContext";
+import {notNull} from "../utils/utilities";
 
 const usePikachu = () => {
 
@@ -54,12 +55,55 @@ const usePikachu = () => {
         })
     }
 
+    function addNewBook(data){
+        setState(prevState => {
+            return {
+                ...prevState,
+                books: [...prevState.books, data]
+            }
+        })
+        return {
+            success: true,
+            message: "Book Added successfully"
+        }
+    }
+
+    function updateBook(data){
+        if (notNull(state.books)){
+            let bookIndex = state.books.findIndex(book => book.id === data.id)
+            let books = [...state.books];
+            books[bookIndex].name = data.name;
+            books[bookIndex].author = data.author;
+            books[bookIndex].date = data.date;
+            books[bookIndex].description = data.description;
+            setState(prevState => {
+                return {
+                    ...prevState,
+                    books: books
+                }
+            })
+            return {
+                success: true,
+                message: "Book updated successfully"
+            }
+        } else {
+            return {
+                success: false,
+                message: "No Books Available"
+            }
+        }
+    }
+
     return {
         adminDetails: state.adminDetails,
 
         users: state.users,
 
         books: state.books,
+
+        addNewBook,
+
+        updateBook,
 
         signIn: signIn,
 

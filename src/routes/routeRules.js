@@ -2,11 +2,11 @@ export const routeRules = {
     landing: "/",
 
 
-    signIn: 'signin',
+    signIn: '/signin',
 
-    signUp: "signup",
+    signUp: "/signup",
 
-    books: "books",
+    books: "/books",
 
 
 

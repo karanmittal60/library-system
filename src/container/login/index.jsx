@@ -4,7 +4,7 @@ import {routeRules} from "../../routes/routeRules";
 import LabelWithInput from "../../components/labelWithInput";
 import LabelWithSelect from "../../components/labelWithSelect";
 import {validateEmail} from "../../utils/utilities";
-import {toast} from "react-toastify";
+import {toast, ToastContainer} from "react-toastify";
 
 const Login = (props) => {
 
@@ -54,6 +54,7 @@ const Login = (props) => {
 
     return (
         <div className="container-fluid">
+            <ToastContainer/>
             <div className="login">
                 <div className="text-center">
                     <h3>Welcome to Library system</h3>

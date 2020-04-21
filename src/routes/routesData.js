@@ -1,6 +1,5 @@
 import {routeRules} from "./routeRules";
 import Login from "../container/login";
-import Users from "../container/users";
 import Books from "../container/books";
 
 export const routesData = [
@@ -30,13 +29,6 @@ export const routesData = [
         path: routeRules.login,
         component: Login,
         auth: false,
-        exact: false
-    },
-    {
-        key: routeRules.users,
-        path: routeRules.users,
-        component: Users,
-        auth: true,
         exact: false
     }
 ];

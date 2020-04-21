@@ -1,12 +1,16 @@
 import React from 'react';
 import Header from "../Navigations/header";
-import LeftMenu from "../Navigations/leftMenu";
+import {toast} from "react-toastify";
 
 const AppLayout = (props) => {
+    toast.configure({
+        autoClose: 3000,
+        draggable: false,
+        hideProgressBar: true
+    });
     return (
         <>
             <Header/>
-            {/*<LeftMenu/>*/}
             {props.children}
         </>
     );
